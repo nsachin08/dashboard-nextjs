@@ -69,14 +69,12 @@ export async function getServerSideProps(context) {
   if (!mongoose.connections[0].readyState) {
     await mongoose.connect(process.env.MONGO_URI);
   }
-  console.log(context.req.headers.cookie);
   let Id = "0";
   if (context.req.headers.cookie == undefined) {
   } else {
     Id = context.req.headers.cookie.substring(9);
   }
 
-  console.log(Id);
   let webs = await Website.find({ userId: Id });
   webs = JSON.parse(JSON.stringify(webs));
   let t_rev = 0;

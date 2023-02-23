@@ -2,7 +2,6 @@ import Website from "../../models/Websites";
 import connectDb from "../../middleware/mongoose";
 
 const handler = async (req, res) => {
-  console.log(req.body.id);
   let field = req.body.field;
 
   if (req.method == "POST") {

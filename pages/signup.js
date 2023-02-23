@@ -29,13 +29,6 @@ export default function SignUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     let data = new FormData(event.currentTarget);
-    console.log({
-      firstname: data.get("firstName"),
-      secondname: data.get("lastName"),
-      userEmail: data.get("email"),
-      userPassword: data.get("password"),
-      userName: data.get("username"),
-    });
 
     data = {
       firstname: data.get("firstName"),
@@ -44,9 +37,9 @@ export default function SignUp() {
       userPassword: data.get("password"),
       userName: data.get("username"),
     };
-    console.log(data);
-    const rootUri = process.env.REACT_APP_SERVER_URL || "http://localhost:3000";
-    let res = await fetch(rootUri + "api/signup", {
+    const rootUri =
+      process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
+    let res = await fetch(rootUri + "/api/signup", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",
@@ -54,7 +47,6 @@ export default function SignUp() {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log(response);
 
     if (response.success) {
       router.push("/login");

@@ -33,15 +33,12 @@ export default function SignIn() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     let data = new FormData(event.currentTarget);
-    console.log({
-      userEmail: data.get("email"),
-      userPassword: data.get("password"),
-    });
     data = {
       userEmail: data.get("email"),
       userPassword: data.get("password"),
     };
-    const rootUri = process.env.REACT_APP_SERVER_URL || "http://localhost:3000";
+    const rootUri =
+      process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
 
     let res = await fetch(rootUri + "/api/loginadmin", {
       method: "POST", // or 'PUT'
@@ -51,7 +48,7 @@ export default function SignIn() {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log(response);
+
     if (response.success) {
       localStorage.setItem("token", response.token);
       localStorage.setItem("role", response.role);

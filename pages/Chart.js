@@ -25,8 +25,6 @@ function Chart({
   t_site,
   t_click,
 }) {
-  console.log(Avg_site);
-
   return (
     <Box m="1.5rem 2.5rem">
       <Box

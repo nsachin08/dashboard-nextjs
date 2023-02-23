@@ -13,12 +13,9 @@ const changeEdit = async (cellData) => {
     },
     body: JSON.stringify(cellData),
   });
-  console.log(response);
 };
 
 const Web = ({ webs }) => {
-  console.log(webs);
-
   const columns = [
     {
       field: "Website",

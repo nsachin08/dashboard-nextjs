@@ -43,9 +43,9 @@ export default function User_web() {
       email: String(email),
       password: String(password),
     };
-    console.log(data);
-    const rootUri = process.env.REACT_APP_SERVER_URL || "http://localhost:3000";
-    let res = await fetch(rootUri + "api/addWeb", {
+    const rootUri =
+      process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
+    let res = await fetch(rootUri + "/api/addWeb", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,6 @@ export default function User_web() {
       body: JSON.stringify(data),
     });
     let response = await res.json();
-    console.log(response);
     if (response.success) {
       router.push("/user_chart");
     }

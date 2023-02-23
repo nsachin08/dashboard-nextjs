@@ -1,0 +1,15 @@
+===========
+admin portal login
+
+url: /admin/login
+email :admin@email.com
+password: admin
+
+============
+
+user portal login 
+url:/
+email:test4@email.com
+password:test4
+
+============

@@ -17,7 +17,6 @@ const changeEdit = async (cellData) => {
     },
     body: JSON.stringify(cellData),
   });
-  console.log(response);
 };
 
 const Admin = ({ users }) => {

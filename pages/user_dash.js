@@ -18,7 +18,6 @@ const changeEdit = async (cellData) => {
     },
     body: JSON.stringify(cellData),
   });
-  console.log(response);
 };
 
 const User_Dash = ({ webs }) => {
@@ -91,7 +90,6 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI);
   }
   const Id = context.req.headers.cookie.substring(9);
-  console.log(Id);
   let id = 4;
   let webs = await Website.find({ userId: Id });
   webs = JSON.parse(JSON.stringify(webs));
