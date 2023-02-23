@@ -41,8 +41,8 @@ export default function SignIn() {
       userEmail: data.get("email"),
       userPassword: data.get("password"),
     };
-
-    let res = await fetch("http://localhost:3000/api/login", {
+    const rootUri = process.env.REACT_APP_SERVER_URL || "http://localhost:3000";
+    let res = await fetch(rootUri + "/api/login", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

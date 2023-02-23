@@ -45,8 +45,8 @@ export default function SignUp() {
       userName: data.get("username"),
     };
     console.log(data);
-
-    let res = await fetch("http://localhost:3000/api/signup", {
+    const rootUri = process.env.REACT_APP_SERVER_URL || "http://localhost:3000";
+    let res = await fetch(rootUri + "api/signup", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

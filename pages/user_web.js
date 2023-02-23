@@ -44,7 +44,8 @@ export default function User_web() {
       password: String(password),
     };
     console.log(data);
-    let res = await fetch("http://localhost:3000/api/addWeb", {
+    const rootUri = process.env.REACT_APP_SERVER_URL || "http://localhost:3000";
+    let res = await fetch(rootUri + "api/addWeb", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
