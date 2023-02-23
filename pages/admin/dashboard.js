@@ -1,6 +1,6 @@
 import Users from "../../models/Users";
 import mongoose from "mongoose";
-import { ColorModeContext, useMode } from "../theme";
+import { ColorModeContext, useMode } from "../../theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import SideBar from "../../components/SideBar";

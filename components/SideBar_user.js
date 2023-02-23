@@ -1,6 +1,6 @@
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, Typography, useTheme } from "@mui/material";
-import { tokens } from "../pages/theme";
+import { tokens } from "../theme";
 import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";

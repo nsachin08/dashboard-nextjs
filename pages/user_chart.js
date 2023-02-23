@@ -1,4 +1,4 @@
-import { ColorModeContext, useMode } from "./theme";
+import { ColorModeContext, useMode } from "../theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ProSidebarProvider } from "react-pro-sidebar";
 import SideBar_user from "../components/SideBar_user.js";
