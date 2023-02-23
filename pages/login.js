@@ -37,8 +37,6 @@ export default function SignIn() {
       userEmail: data.get("email"),
       userPassword: data.get("password"),
     };
-    const rootUri =
-      process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
     let res = await fetch("/api/login", {
       method: "POST", // or 'PUT'
       headers: {
