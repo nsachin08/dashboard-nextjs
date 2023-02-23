@@ -39,7 +39,7 @@ export default function SignIn() {
     };
     const rootUri =
       process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
-    let res = await fetch(rootUri + "/api/login", {
+    let res = await fetch("/api/login", {
       method: "POST", // or 'PUT'
       headers: {
         "Content-Type": "application/json",

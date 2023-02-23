@@ -45,7 +45,7 @@ export default function User_web() {
     };
     const rootUri =
       process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000";
-    let res = await fetch(rootUri + "/api/addWeb", {
+    let res = await fetch("/api/addWeb", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
