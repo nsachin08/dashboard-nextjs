@@ -1,14 +1,16 @@
-## Preview url : https://dashboard-nextjs-9kubjc0ay-nsachin08.vercel.app/
+## Preview url : https://dashboard-nextjs-eta.vercel.app/
 
 ## Techstack Used : NextJS , Material UI.
 
 ## Preview
 
 ### Admin Login
+
 - email : admin@email.com
 - pass: admin
 
 ### User Login
+
 - email: test4@email.com
 - pass: test4
 
